@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/showitup/SPLID-TrustBench/main/benchmarks/splid_trustbench/availability/submission.schema.json",
+  "title": "SPLID-TrustBench availability-aware submission metadata",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "method_id",
+    "availability_track",
+    "lookahead_budget_steps",
+    "teacher_used_at_inference",
+    "causal_audit",
+    "evaluation_status"
+  ],
+  "properties": {
+    "schema_version": {"enum": ["1.0.0", "1.1.0"]},
+    "method_id": {"type": "string", "minLength": 1},
+    "availability_track": {
+      "enum": ["offline_full", "lookahead_256", "lookahead_32", "bounded_6", "bounded_support_6", "strict_causal"]
+    },
+    "lookahead_budget_steps": {"type": ["integer", "null"], "minimum": 0},
+    "teacher_used_at_inference": {"type": "boolean"},
+    "causal_audit": {
+      "type": "object",
+      "required": [
+        "performed",
+        "passed",
+        "layered",
+        "future_perturbation_max_abs_difference",
+        "raw_encoder_future_suffix",
+        "commit_layer_replay"
+      ],
+      "properties": {
+        "performed": {"type": "boolean"},
+        "passed": {"type": "boolean"},
+        "layered": {"type": "boolean"},
+        "raw_encoder_future_suffix": {
+          "type": "object",
+          "required": ["performed", "passed"],
+          "properties": {
+            "performed": {"type": "boolean"},
+            "passed": {"type": "boolean"}
+          }
+        },
+        "commit_layer_replay": {
+          "type": "object",
+          "required": ["performed", "passed"],
+          "properties": {
+            "performed": {"type": "boolean"},
+            "passed": {"type": "boolean"}
+          }
+        },
+        "future_perturbation_max_abs_difference": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "evaluation_status": {"const": "observed_development_test"},
+    "source_metadata_status": {"const": "count_aligned_inference_unverified"},
+    "sealed_claim": {"const": false}
+  },
+  "additionalProperties": true
+}

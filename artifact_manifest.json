@@ -1,0 +1,162 @@
+{
+  "repository": "https://github.com/showitup/SPLID-TrustBench",
+  "artifact_kind": "benchmark_protocol",
+  "code_license": "pending_owner_decision",
+  "source_state": "working_tree",
+  "scope": "benchmark evaluation, splits, schemas and delivery generators only",
+  "excluded": [
+    "frontend",
+    "model encoders",
+    "masked training",
+    "tree readouts",
+    "ETTG",
+    "checkpoints",
+    "internal results"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 100
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 522
+    },
+    {
+      "path": "README.md",
+      "bytes": 4735
+    },
+    {
+      "path": "benchmarks/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/splid_trustbench/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/splid_trustbench/artifact_smoke.py",
+      "bytes": 1999
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/README.md",
+      "bytes": 2509
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/audit_future_suffix.py",
+      "bytes": 5464
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/evaluate_submission.py",
+      "bytes": 9221
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/submission.schema.json",
+      "bytes": 2105
+    },
+    {
+      "path": "benchmarks/splid_trustbench/availability/tracks.json",
+      "bytes": 1674
+    },
+    {
+      "path": "benchmarks/splid_trustbench/delivery/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "benchmarks/splid_trustbench/delivery/causal_masks.py",
+      "bytes": 3875
+    },
+    {
+      "path": "benchmarks/splid_trustbench/delivery/transport.py",
+      "bytes": 8345
+    },
+    {
+      "path": "benchmarks/splid_trustbench/manifests/phase2_objects.csv",
+      "bytes": 56563
+    },
+    {
+      "path": "benchmarks/splid_trustbench/official_metric_bridge.py",
+      "bytes": 6837
+    },
+    {
+      "path": "benchmarks/splid_trustbench/splits/phase2_object_splits_seed20260424.csv",
+      "bytes": 66170
+    },
+    {
+      "path": "docs/DATA_CARD.md",
+      "bytes": 1533
+    },
+    {
+      "path": "docs/DELIVERY_PROTOCOL.md",
+      "bytes": 2325
+    },
+    {
+      "path": "examples/offline_submission.meta.json",
+      "bytes": 545
+    },
+    {
+      "path": "interfaces/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "interfaces/orbit_evidence/SCHEMA.md",
+      "bytes": 5322
+    },
+    {
+      "path": "interfaces/orbit_evidence/__init__.py",
+      "bytes": 0
+    },
+    {
+      "path": "interfaces/orbit_evidence/schemas/evidence_slot_features.schema.json",
+      "bytes": 1067
+    },
+    {
+      "path": "interfaces/orbit_evidence/schemas/orbit_evidence.schema.json",
+      "bytes": 1583
+    },
+    {
+      "path": "interfaces/orbit_evidence/schemas/orbit_evidence_meta.schema.json",
+      "bytes": 597
+    },
+    {
+      "path": "interfaces/orbit_evidence/schemas/policy_evidence_view.json",
+      "bytes": 986
+    },
+    {
+      "path": "interfaces/orbit_evidence/validate_orbit_evidence.py",
+      "bytes": 16323
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 56
+    },
+    {
+      "path": "tests/test_availability_evaluator.py",
+      "bytes": 4670
+    },
+    {
+      "path": "tests/test_evidence_degradation.py",
+      "bytes": 2548
+    },
+    {
+      "path": "tests/test_future_suffix_artifact.py",
+      "bytes": 1364
+    },
+    {
+      "path": "tests/test_orbit_evidence_commitment_validation.py",
+      "bytes": 2359
+    },
+    {
+      "path": "tests/test_public_protocol_masks.py",
+      "bytes": 1162
+    },
+    {
+      "path": "tests/test_splid_official_metric_bridge.py",
+      "bytes": 1175
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_name": "orbit_evidence_meta",
+  "schema_version": "1.0.0",
+  "required_fields": [
+    "schema_version",
+    "producer_name",
+    "producer_version",
+    "source_split_manifest",
+    "label_protocol_version",
+    "feature_spec_version",
+    "decoder_config",
+    "calibration_config",
+    "normalization_stats_source",
+    "created_at",
+    "evidence_file",
+    "row_count",
+    "object_count",
+    "invalid_row_policy",
+    "invalid_rows"
+  ],
+  "invalid_row_policy_required_fields": [
+    "row_retention",
+    "null_score_fields_allowed_if_is_valid_zero",
+    "reason_tracking"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "method_id": "replace_with_method_name",
+  "availability_track": "offline_full",
+  "lookahead_budget_steps": null,
+  "teacher_used_at_inference": false,
+  "causal_audit": {
+    "performed": false,
+    "passed": false,
+    "layered": false,
+    "future_perturbation_max_abs_difference": null,
+    "raw_encoder_future_suffix": {"performed": false, "passed": false},
+    "commit_layer_replay": {"performed": false, "passed": false}
+  },
+  "evaluation_status": "observed_development_test",
+  "sealed_claim": false
+}

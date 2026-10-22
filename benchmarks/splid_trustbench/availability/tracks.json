@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1.0",
+  "tracks": {
+    "offline_full": {
+      "maximum_lookahead_steps": null,
+      "maximum_detection_delay_steps": null,
+      "requires_future_suffix_audit": false,
+      "description": "Full-trajectory offline inference and post-processing."
+    },
+    "lookahead_256": {
+      "maximum_lookahead_steps": 256,
+      "maximum_detection_delay_steps": 256,
+      "requires_future_suffix_audit": false,
+      "description": "Bounded future-window inference with at most 256 visible future steps."
+    },
+    "lookahead_32": {
+      "maximum_lookahead_steps": 32,
+      "maximum_detection_delay_steps": 32,
+      "requires_future_suffix_audit": false,
+      "description": "Bounded future-window inference with at most 32 visible future steps."
+    },
+    "bounded_6": {
+      "maximum_lookahead_steps": 0,
+      "maximum_detection_delay_steps": 6,
+      "requires_future_suffix_audit": true,
+      "description": "Historical event-relative contract: release within six steps of reported event time."
+    },
+    "bounded_support_6": {
+      "maximum_lookahead_steps": 0,
+      "maximum_detection_delay_steps": null,
+      "maximum_resolution_delay_steps": 6,
+      "resolution_origin_column": "first_support_at",
+      "requires_future_suffix_audit": true,
+      "description": "Paper contract: prefix-only inference, resolving each candidate within six steps of first support; event-relative latency is reported separately."
+    },
+    "strict_causal": {
+      "maximum_lookahead_steps": 0,
+      "maximum_detection_delay_steps": 0,
+      "requires_future_suffix_audit": true,
+      "description": "Prefix-only zero-delay inference."
+    }
+  }
+}

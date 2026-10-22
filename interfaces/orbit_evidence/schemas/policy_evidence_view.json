@@ -1,0 +1,20 @@
+{
+  "name": "Label-disjoint policy evidence view",
+  "schema_version": "1.0.0",
+  "source_schema_version": "1.1.0",
+  "storage_key": ["object_id", "time_idx", "direction"],
+  "directional_feature_order": [
+    "p_mode_nk", "p_mode_ck", "p_mode_ek", "p_mode_hk",
+    "forecast_residual", "physics_residual", "uncertainty", "mode_entropy",
+    "drift_residual", "physics_violation", "drift_risk", "physics_risk", "is_valid"
+  ],
+  "delivery_descriptors": ["expected_native_validity", "token_presence", "field_presence"],
+  "excluded_channels": [
+    "p_background", "p_start", "p_inside", "p_end", "p_id", "p_ad", "p_ik",
+    "event_logit_margin", "behavior_consistency", "p_transition",
+    "slot_risk_label", "native_target", "raw_coordinates", "hidden_state"
+  ],
+  "ambiguity_semantics": "uncertainty is a learned boundary-transition ambiguity score",
+  "slot_size_steps": 12,
+  "tail_policy": "retain partial final slots; native inventory distinguishes padding from delivery loss"
+}

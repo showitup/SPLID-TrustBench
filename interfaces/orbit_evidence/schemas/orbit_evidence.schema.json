@@ -1,0 +1,72 @@
+{
+  "schema_name": "orbit_evidence",
+  "schema_version": "1.1.0",
+  "primary_key": ["object_id", "time_idx", "direction"],
+  "required_columns": [
+    "object_id",
+    "time_idx",
+    "direction",
+    "timestamp_utc",
+    "split",
+    "p_background",
+    "p_start",
+    "p_inside",
+    "p_end",
+    "p_id",
+    "p_ad",
+    "p_ik",
+    "p_mode_nk",
+    "p_mode_ck",
+    "p_mode_ek",
+    "p_mode_hk",
+    "behavior_consistency",
+    "forecast_residual",
+    "physics_residual",
+    "uncertainty",
+    "event_logit_margin",
+    "mode_entropy",
+    "is_valid",
+    "drift_residual",
+    "physics_violation",
+    "drift_risk",
+    "physics_risk",
+    "evidence_schema_version"
+  ],
+  "categorical_values": {
+    "direction": ["EW", "NS"],
+    "split": ["train", "val", "test", "stress_train", "stress_val", "stress_test"],
+    "is_valid": [0, 1]
+  },
+  "probability_groups": {
+    "boundary": ["p_background", "p_start", "p_inside", "p_end"],
+    "event_type": ["p_id", "p_ad", "p_ik"],
+    "mode": ["p_mode_nk", "p_mode_ck", "p_mode_ek", "p_mode_hk"]
+  },
+  "range_columns": {
+    "probabilities": [
+      "p_background",
+      "p_start",
+      "p_inside",
+      "p_end",
+      "p_id",
+      "p_ad",
+      "p_ik",
+      "p_mode_nk",
+      "p_mode_ck",
+      "p_mode_ek",
+      "p_mode_hk",
+      "behavior_consistency",
+      "uncertainty",
+      "drift_risk",
+      "physics_risk"
+    ],
+    "non_negative": [
+      "forecast_residual",
+      "physics_residual",
+      "mode_entropy",
+      "drift_residual",
+      "physics_violation"
+    ]
+  },
+  "probability_sum_tolerance": 0.0001
+}
