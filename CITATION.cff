@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite this repository when using the SPLID-TrustBench protocols or evaluation software."
 type: software
+license: MIT
 title: "SPLID-TrustBench: Availability-Conditioned Orbit Evidence"
 authors:
   - name: "SPLID-TrustBench contributors"

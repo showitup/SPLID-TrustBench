@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/showitup/SPLID-TrustBench",
   "artifact_kind": "benchmark_protocol",
-  "code_license": "pending_owner_decision",
+  "code_license": "MIT",
   "source_state": "working_tree",
   "scope": "benchmark evaluation, splits, schemas and delivery generators only",
   "excluded": [
@@ -20,11 +20,15 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 522
+      "bytes": 535
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1065
     },
     {
       "path": "README.md",
-      "bytes": 4735
+      "bytes": 2060
     },
     {
       "path": "benchmarks/__init__.py",
