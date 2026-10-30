@@ -22,5 +22,6 @@ sealed test dataset. All fitting and parameter selection use the fixed training
 and validation partitions. The paper distinguishes complete retrospective
 evidence, causal damaged evidence and matched readout conditions.
 
-OPPORTUNITY and OPS-SAT results in the paper are separate mechanism-transfer
-experiments. Their data and trained models are outside this protocol bundle.
+MAD-LEO provides independent orbital validation in the paper. OPPORTUNITY and
+OPS-SAT assess decoding and aggregation on other tasks. These datasets and
+their trained models are obtained separately from this SPLID protocol bundle.

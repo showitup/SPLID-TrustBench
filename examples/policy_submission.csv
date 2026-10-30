@@ -1,0 +1,5 @@
+object_id,time_slot,internal_action,public_action
+7,0,A,allow
+7,1,C,restrict
+7,2,A,allow
+7,3,D,reject

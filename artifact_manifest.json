@@ -3,7 +3,7 @@
   "artifact_kind": "benchmark_protocol",
   "code_license": "MIT",
   "source_state": "working_tree",
-  "scope": "benchmark evaluation, splits, schemas and delivery generators only",
+  "scope": "sparse-node and service-policy evaluation, splits, schemas and delivery generators only",
   "excluded": [
     "frontend",
     "model encoders",
@@ -28,7 +28,7 @@
     },
     {
       "path": "README.md",
-      "bytes": 2060
+      "bytes": 3733
     },
     {
       "path": "benchmarks/__init__.py",
@@ -40,7 +40,7 @@
     },
     {
       "path": "benchmarks/splid_trustbench/artifact_smoke.py",
-      "bytes": 1999
+      "bytes": 2403
     },
     {
       "path": "benchmarks/splid_trustbench/availability/README.md",
@@ -79,6 +79,10 @@
       "bytes": 8345
     },
     {
+      "path": "benchmarks/splid_trustbench/evaluate_policy.py",
+      "bytes": 4113
+    },
+    {
       "path": "benchmarks/splid_trustbench/manifests/phase2_objects.csv",
       "bytes": 56563
     },
@@ -91,8 +95,12 @@
       "bytes": 66170
     },
     {
+      "path": "docs/BENCHMARK_GUIDE.md",
+      "bytes": 5201
+    },
+    {
       "path": "docs/DATA_CARD.md",
-      "bytes": 1533
+      "bytes": 1610
     },
     {
       "path": "docs/DELIVERY_PROTOCOL.md",
@@ -101,6 +109,14 @@
     {
       "path": "examples/offline_submission.meta.json",
       "bytes": 545
+    },
+    {
+      "path": "examples/policy_submission.csv",
+      "bytes": 102
+    },
+    {
+      "path": "examples/policy_targets.csv",
+      "bytes": 55
     },
     {
       "path": "interfaces/__init__.py",
@@ -153,6 +169,10 @@
     {
       "path": "tests/test_orbit_evidence_commitment_validation.py",
       "bytes": 2359
+    },
+    {
+      "path": "tests/test_public_policy_evaluation.py",
+      "bytes": 2538
     },
     {
       "path": "tests/test_public_protocol_masks.py",

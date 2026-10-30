@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 from benchmarks.splid_trustbench.availability.evaluate_submission import evaluate
+from benchmarks.splid_trustbench.evaluate_policy import evaluate as evaluate_policy
 from benchmarks.splid_trustbench.delivery.causal_masks import delivered_view
 
 
@@ -31,7 +32,11 @@ def main():
         prefix = delivered_view(values[:27], present[:27], slots.iloc[:27], condition, 20261017)
         for a, b in zip(full, prefix):
             np.testing.assert_array_equal(a[:27], b)
-    print(json.dumps({"status": "passed", "checks": ["split_counts", "metric_fixture", "prefix_masks"],
+    policy = evaluate_policy(pd.read_csv(root / "examples/policy_targets.csv"),
+                             pd.read_csv(root / "examples/policy_submission.csv"))
+    assert policy["false_allowance"] == .5 and policy["normal_restriction_rate"] == .5
+    assert np.isclose(policy["policy_regret"], .85)
+    print(json.dumps({"status": "passed", "checks": ["split_counts", "metric_fixture", "prefix_masks", "policy_fixture"],
                       "scope": "installation checks, not benchmark performance"}))
 
 
